@@ -3,6 +3,9 @@
 
 "use client";
 import { Table } from "flowbite-react";
+import { Button } from "@/components/ui/button"
+ 
+
 import {useEffect, useState } from 'react'
 import {createClient} from "@/utils/supabase/client";
 
@@ -60,10 +63,21 @@ return (
                     <Table.Cell>{new Date(start).toLocaleDateString("en-US")}</Table.Cell>
                     <Table.Cell>{new Date(start).toLocaleDateString("en-US")}</Table.Cell>
                     <Table.Cell>{theme}</Table.Cell>
-                    <Table.Cell>{status}</Table.Cell>
+                    <Table.Cell> 
+                    {status ? (
+                    <span className="text-green-500 font-bold">
+                    Active
+                    </span>
+                 
+                      
+                    
+                    ) : (
+                <span className="text-red-500 font-bold">Inactive</span>
+                    )}
+                        </Table.Cell>
                     <Table.Cell>
                     <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                    Edit
+                    <Button> Join </Button>
                     </a>
                     </Table.Cell>
                     </Table.Row>
