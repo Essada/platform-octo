@@ -3,6 +3,9 @@ import { createClient } from "@/utils/supabase/server";
 import { InfoIcon } from "lucide-react";
 import { redirect } from "next/navigation";
 import Opencontests from '/Users/adamessawi/platform-octo/platform-octo/app/mainfeed/open-contests.jsx';
+import Profiles from '/Users/adamessawi/platform-octo/platform-octo/app/mainfeed/profile.jsx'
+import Attributes from '/Users/adamessawi/platform-octo/platform-octo/app/mainfeed/attributes.jsx'
+
 
 export default async function ProtectedPage() {
   const supabase = await createClient();
@@ -16,7 +19,7 @@ export default async function ProtectedPage() {
   }
 
   return (
-    
+   /*
     <div className="flex-1 w-full flex flex-col gap-12">
    <div className="absolute inset-0 -z-10 h-full w-full bg-black bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[400px] w-[400px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div></div>
       <div className="w-full">
@@ -25,10 +28,37 @@ export default async function ProtectedPage() {
           This is a protected page that you can only see as an authenticated
           user
         </div>
-          <Opencontests />
+          <div className="flex flex-row gap-12"> 
+            <div className="w-3/5" >
+              <Opencontests />
+            </div>
+          <div className="w-2/5 bg-white"> 
+            <Profiles />
+          </div>
+           
+            
+            
+
+
+          </div>
        
-        
+      
       </div>
     </div>
+    */
+   <div className="flex-1 w-full h-[600px] flex h-box border 4 bg-white"> 
+      <div className="flex w-3/5 h-full bg-black"> 
+        <Opencontests />
+      
+      </div>
+
+      <div className="flex w-2/5 h-full bg-red-100"> 
+        <div className="v-box flexbox w-full h-1/2 bg-black"> 
+          <Profiles />
+          <Attributes />
+        </div>
+      
+      </div>
+  </div>
   );
 }

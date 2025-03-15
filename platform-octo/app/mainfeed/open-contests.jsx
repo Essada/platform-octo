@@ -38,7 +38,7 @@ const Opencontests = () => {
 
 
 return (
-<div className="overflow-x-auto">
+<div className="overflow-x-auto h-full w-full">
 <Table>
         <Table.Head>
           <Table.HeadCell>Company</Table.HeadCell>
@@ -56,7 +56,7 @@ return (
             {
                 Feed.map(({company, start, end, theme, status, id}) =>  (
                     
-                    <Table.Row key={id} className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                    <Table.Row key={id} className="bg-white dark:border-gray-600 dark:bg-gray-800">
                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                     {company}
                     </Table.Cell>
