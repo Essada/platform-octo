@@ -46,19 +46,26 @@ export default async function ProtectedPage() {
       </div>
     </div>
     */
-   <div className="flex-1 w-full h-[600px] flex h-box border 4 bg-white"> 
+    
+    
+   
+   
+ 
+   <div className="flex-1 w-full h-[600px] flex h-box gap-7"> 
+ <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px] opacity-60 pointer-events-none"></div>
       <div className="flex w-3/5 h-full bg-black"> 
         <Opencontests />
       
       </div>
 
-      <div className="flex w-2/5 h-full bg-red-100"> 
-        <div className="v-box flexbox w-full h-1/2 bg-black"> 
+      <div className="flex w-2/5 h-full bg-white bg-opacity-80"> 
+        <div className="bg-gradient-to-t from-stone-50 to-green-300 bg-opacity-100 w-full h-1/2"> 
           <Profiles />
           <Attributes />
         </div>
       
       </div>
   </div>
+  
   );
 }

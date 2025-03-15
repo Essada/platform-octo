@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const { colors } = require("tailwindcss/defaultTheme");
 
 const flowbite = require("flowbite-react/tailwind");
 
@@ -8,10 +9,10 @@ const config = {
   darkMode: ["class"],
   content: [
     flowbite.content(),
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",    // Next.js App Router
+    "./pages/**/*.{js,ts,jsx,tsx}",  // Next.js Pages Router
+    "./components/**/*.{js,ts,jsx,tsx}", // Custom Components
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   prefix: "",
   theme: {
@@ -24,6 +25,7 @@ const config = {
     },
     extend: {
       colors: {
+        ...colors,
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

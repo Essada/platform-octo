@@ -56,7 +56,7 @@ return (
             {
                 Feed.map(({company, start, end, theme, status, id}) =>  (
                     
-                    <Table.Row key={id} className="bg-white dark:border-gray-600 dark:bg-gray-800">
+                    <Table.Row key={id} className="bg-white dark:border-gray-700 dark:bg-[#0F0F0F]">
                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                     {company}
                     </Table.Cell>
@@ -65,7 +65,7 @@ return (
                     <Table.Cell>{theme}</Table.Cell>
                     <Table.Cell> 
                     {status ? (
-                    <span className="text-green-500 font-bold">
+                    <span className="text-green-300 font-bold">
                     Active
                     </span>
                  
